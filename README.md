@@ -1,4 +1,12 @@
+<!--https://create.arduino.cc/projecthub/MisterBotBreak/how-to-use-a-rain-sensor-bcecd9-->
+
 # RainSensor
+
+A rain sensor is composed of a rain detection plate with a comparator who manages intelligence. The rain sensor detects water that comes short circuiting the tape of the printed circuits.
+
+The sensor acts as a variable resistance that will change status : the resistance increases when the sensor is wet and the resistance is lower when the sensor is dry.
+
+The comparator has 2 outputs connected to the rain sensor, a digital output (0/1) and an analog output (0 to 1023).
 
 ## Contributing
 
