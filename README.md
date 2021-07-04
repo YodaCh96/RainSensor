@@ -18,6 +18,12 @@ The comparator has 2 outputs connected to the rain sensor, a digital output (0/1
 - DO &rarr; D4
 - AO &rarr; A0
 
+![Connection](images/Connection.png)
+
+### Adjust the sensitivity
+
+You can also adjust the sensitivity by turning the potentiometer present on the comparator. So the detection can be realize on a drop or in a glass of water.
+
 ## Contributing
 
 This is a personal learning project for me. Please feel free to fork this repo. Pull request to submit more programs.
