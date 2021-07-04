@@ -3,52 +3,45 @@ import matplotlib.pyplot as plt
 from drawnow import *
 import atexit
 
-values = []
-
-plt.ion()
-cnt = 0
-
-serialArduino = serial.Serial('COM5', 9600)
-
-
-def plotvalues():
-    plt.title('Serial value from Arduino')
+def plot():
+    plt.title("Rainsensor")
     plt.grid(True)
-    plt.ylabel('Values')
-    plt.plot(values, 'rx-', label='values')
-    plt.legend(loc='upper right')
+    plt.ylabel("Values")
+    plt.plot(SensorValues, label="values")
+    plt.legend(loc="upper right")
 
 
 def doatexit():
     serialArduino.close()
-    print("Close serial")
-    print("serialArduino.isOpen() = " + str(serialArduino.isOpen()))
 
+
+SensorValues = []
+
+plt.ion()
+
+RainSensor = serial.Serial("COM3", 9600)
 
 atexit.register(doatexit)
 
-print("serialArduino.isOpen() = " + str(serialArduino.isOpen()))
-
 for i in range(0, 26):
-    values.append(0)
+    SensorValues.append(0)
 
 while True:
-    while serialArduino.inWaiting() == 0:
+    while RainSensor.inWaiting() == 0:
         pass
-    print("readline()")
-    valueRead = serialArduino.readline(500)
+
+    RainSensorRead = RainSensor.readline(500)
 
     try:
-        valueInInt = int(valueRead)
-        print(valueInInt)
-        if valueInInt <= 1024:
-            if valueInInt >= 0:
-                values.append(valueInInt)
-                values.pop(0)
-                drawnow(plotvalues)
+        RainSensorRead = int(RainSensorRead)
+        if RainSensorRead <= 1024:
+            if RainSensorRead >= 0:
+                SensorValues.append(RainSensorRead)
+                SensorValues.pop(0)
+                drawnow(plot)
             else:
-                print("Invalid! negative number")
+                print("Invalid negative number.")
         else:
-            print("Invalid! too large")
+            print("Invalid too large number.")
     except ValueError:
-        print("Invalid! cannot cast")
+        print("Cannot cast")
