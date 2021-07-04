@@ -1,30 +1,29 @@
-const int capteur_D = 4;
-const int capteur_A = A0;
+const int RainSensor_D = 4;
+const int RainSensor_A = 0;
 
-int val_analogique;
+int RainSensorRead;
 
-void setup()
-{
-  pinMode(capteur_D, INPUT);
-  pinMode(capteur_A, INPUT);
-  Serial.begin(9600);
+void setup(){
+    pinMode(RainSensor_D, INPUT);
+    pinMode(RainSensor_A, INPUT);
+    Serial.begin(9600);
 }
 
-void loop()
-{
-  if(digitalRead(capteur_D) == LOW) 
-  {
-    Serial.println("Digital value : wet"); 
-    delay(10); 
-  }
-  else
-  {
-    Serial.println("Digital value : dry");
-    delay(10); 
-  }
-  val_analogique=analogRead(capteur_A); 
-  Serial.print("Analog value : ");
-  Serial.println(val_analogique); 
-  Serial.println("");
-  delay(1000);
+void loop(){
+    if(digitalRead(RainSensor_D) == LOW) {
+        Serial.println("Digital value : wet"); 
+        delay(10); 
+    }
+    else{
+        Serial.println("Digital value : dry");
+        delay(10); 
+    }
+    
+    RainSensorRead  = analogRead(RainSensor_A);
+    
+    Serial.print("Analog value : ");
+    Serial.println(RainSensorRead ); 
+    Serial.println("");
+    
+    delay(1000);
 }
