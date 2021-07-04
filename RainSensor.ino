@@ -1,12 +1,12 @@
-int rainsense = 0; // analog sensor input pin A0
+int RainSensor = 0; // Analog Input A0
 
-void setup() {
-  Serial.begin(9600);
-  pinMode(rainsense, INPUT);
+void setup(){
+    Serial.begin(9600);
+    pinMode(RainSensor, INPUT);
 }
 
-void loop() {
-   int rainSenseReading = analogRead(rainsense);
-   Serial.println(rainSenseReading);
-   delay(1000);
+void loop(){
+    int RainSensorRead = analogRead(RainSensor);
+    Serial.println(RainSensorRead);
+    delay(1000);
 }
