@@ -10,6 +10,14 @@ The sensor acts as a variable resistance that will change status : the resistanc
 
 The comparator has 2 outputs connected to the rain sensor, a digital output (0/1) and an analog output (0 to 1023).
 
+## Connections
+
+- Arduino &rarr; Comparator
+- 5V &rarr; VCC
+- GND &rarr; GND
+- DO &rarr; D4
+- AO &rarr; A0
+
 ## Contributing
 
 This is a personal learning project for me. Please feel free to fork this repo. Pull request to submit more programs.
