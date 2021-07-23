@@ -28,9 +28,9 @@ You can also adjust the sensitivity by turning the potentiometer present on the 
 
 ![Plot](images/Plot.png)
 
-## Contributing
+## Contribute
 
-This is a personal learning project for me. Please feel free to fork this repo. Pull request to submit more programs.
+Feel free to contribute in the style of an inner-source project. You can also log issues if you find wrong/ missing functionalities. Contact the maintainer of this project if questions appear.
 
 ## Feedback
 
