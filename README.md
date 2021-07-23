@@ -32,9 +32,9 @@ You can also adjust the sensitivity by turning the potentiometer present on the 
 
 Feel free to contribute in the style of an inner-source project. You can also log issues if you find wrong/ missing functionalities. Contact the maintainer of this project if questions appear.
 
-## Feedback
+## Contact
 
-If you find any bug or have any suggestion, please do file issues. I am graceful for any feedback and will do my best to improve this package.
+Ioannis Christodoulakis, ioannis.ch@outlook.com
 
 ## License
 
